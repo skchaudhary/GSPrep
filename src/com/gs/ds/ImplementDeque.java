@@ -1,13 +1,8 @@
 package com.gs.ds;
 
-class Node<E> {
-    Node next, prev;
-    E data;
-    public Node(E e) {
-        prev=next=null;
-        this.data = e;
-    }
-}
+
+import com.gs.util.Node;
+
 public class ImplementDeque<E> {
     Node<E> first, last;
     int size;
