@@ -4,7 +4,7 @@ public class LengthOfCycle {
     public static void main(String[] args) {
         System.out.println(countLengthOfCycle(new int[]{1, 0}, 0));
         System.out.println(countLengthOfCycle(new int[]{1, 2, 0}, 0));
-        System.out.println(countLengthOfCycle(new int[]{1, 2, 0}, 0));
+        System.out.println(countLengthOfCycle(new int[]{1, 2, 3}, 0));
     }
 
     private static int countLengthOfCycle(int[] arr, int startIndex){
@@ -15,16 +15,16 @@ public class LengthOfCycle {
         int N = arr.length;
         boolean[] visited = new boolean[N];
         int current = startIndex;
-        boolean isNotCycle = false;
+        int c=0;
         while (!visited[current]) {
             visited[current]=true;
             current = arr[current];
-            if (current>N) {
-                isNotCycle = true;
+            if (current>=N) {
+                return -1;
             }
+            c++;
         }
-        if (isNotCycle)
 
-        return -1;
+        return c;
     }
 }
