@@ -36,8 +36,10 @@ public class LongestWord {
                 if (word.length()>wordLength) {
                     result = new HashSet<>();
                     wordLength = word.length();
+                    result.add(word);
+                } else if (word.length()==wordLength) {
+                    result.add(word);
                 }
-                result.add(word);
             }
         }
 
