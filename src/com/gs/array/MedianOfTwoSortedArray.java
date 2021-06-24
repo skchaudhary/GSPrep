@@ -2,7 +2,7 @@ package com.gs.array;
 
 public class MedianOfTwoSortedArray {
     public static void main(String[] args) {
-        System.out.println(findMedianSortedArrays(new int[]{}, new int[]{}));
+        System.out.println(findMedianSortedArrays(new int[]{1, 2, 3}, new int[]{4, 5, 6}));
     }
 
     private static double findMedianSortedArrays(int[] nums1, int[] nums2) {
